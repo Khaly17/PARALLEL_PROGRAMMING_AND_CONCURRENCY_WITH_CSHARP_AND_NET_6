@@ -17,8 +17,15 @@ var bgThread = new Thread((object? data) =>
         Thread.Sleep(100);
         counter++;
     }
+
+    var currentThread = Thread.CurrentThread;
+    System.Console.WriteLine($"Thread ID: {currentThread.ManagedThreadId}");
+    System.Console.WriteLine($"Thread Priority: {currentThread.Priority}");
+    System.Console.WriteLine($"Thread ThreadState: {currentThread.ThreadState}");
+    System.Console.WriteLine($"Thread Name: {currentThread.Name}");
 });
 
+bgThread.Name = "BackgroundThread";
 bgThread.IsBackground = true;
 bgThread.Start(3);
 
