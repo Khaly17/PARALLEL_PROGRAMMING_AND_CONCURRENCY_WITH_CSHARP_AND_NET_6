@@ -19,10 +19,10 @@ var bgThread = new Thread((object? data) =>
     }
 
     var currentThread = Thread.CurrentThread;
-    System.Console.WriteLine($"Thread ID: {currentThread.ManagedThreadId}");
-    System.Console.WriteLine($"Thread Priority: {currentThread.Priority}");
-    System.Console.WriteLine($"Thread ThreadState: {currentThread.ThreadState}");
-    System.Console.WriteLine($"Thread Name: {currentThread.Name}");
+    Console.WriteLine($"Thread ID: {currentThread.ManagedThreadId}");
+    Console.WriteLine($"Thread Priority: {currentThread.Priority}");
+    Console.WriteLine($"Thread ThreadState: {currentThread.ThreadState}");
+    Console.WriteLine($"Thread Name: {currentThread.Name}");
 });
 
 bgThread.Name = "BackgroundThread";
